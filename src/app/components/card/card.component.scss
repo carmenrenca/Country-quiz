@@ -1,0 +1,28 @@
+
+:host{
+   
+    .card{
+        height: 562px;
+        width: 471px;
+    
+        background-color: white;
+        border-radius: 20px;
+       &__title{
+        color: #2f527b;
+        font-size: 24px;
+        position: relative;
+        left: 24px;
+        top: 26px;
+    
+       }
+       &__content{
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           position: relative;
+           top: 31px;
+       
+       } 
+    }
+
+}
