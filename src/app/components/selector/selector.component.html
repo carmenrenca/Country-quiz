@@ -1,15 +1,17 @@
-<div tabindex="1" [ngClass]="results ? ' selector--success' : 'selector--error'" class="selector">
+<div  tabindex="1"  [class]=" option.class"  >
    
- 
+ <div class="selector__info">
     <p class="selector__option">
-        A
-    </p>
+        {{option.letter}}    
+       </p>
+   
+       <p class="selector__country">
+           {{ option.title}}
+       </p>
+ </div>
+   
 
-    <p class="selector__country">
-        Mali
-    </p>
-
-    <span class="material-icons selector__result"> {{results ? 'check_circle' : 'cancel'}} </span>
+    <span class="material-icons selector__result"> {{ option.isCorrect && 'check_circle' }} </span>
 
  
 
