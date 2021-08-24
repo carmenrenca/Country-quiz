@@ -1,17 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+ 
 @Component({
   selector: 'app-selector',
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.scss']
 })
-export class SelectorComponent implements OnInit {
-  @Input() results = false;
+export class SelectorComponent   {
+ 
+  @Input()option:any;
+  
+ 
+   
+ 
 
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.results)
-  }
-
+ 
+ 
 }

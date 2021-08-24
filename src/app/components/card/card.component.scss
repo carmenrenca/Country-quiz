@@ -4,7 +4,7 @@
     .card{
         height: 562px;
         width: 471px;
-    
+        position: relative;
         background-color: white;
         border-radius: 20px;
        &__title{
@@ -23,6 +23,12 @@
            top: 31px;
        
        } 
+    }
+
+    .send{
+        position: absolute;
+    bottom: 28px;
+    right: 30px;
     }
 
 }

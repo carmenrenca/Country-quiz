@@ -1,36 +1,49 @@
 :host{
     width: 90%;
     height: 50px;
- 
-    color: #fff;
+    color: #6066d0;
 
-
+    border: 2px solid rgba(96,102,208,.7);
+    border-radius: 12px;
+   
     cursor: pointer;
     margin-top: 30px;
+   
     .selector {
         display: flex;
-        justify-content: space-around;
+ 
         border-radius: 8px;
         &__result{
             display: flex;
             justify-content: center;
             align-items: center;
-}     
+}   
 
+&__info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
 &--success{
+    color: #fff;
     background-color: #60bf88;
-    border: 2px solid #60bf88;
+   
 }
 &--error{
-
+    color: #fff;
     background-color: #ea8282;
-    border: 2px solid #ea8282;
+   
 }
     }
 
-    .selector:focus{
-        color: red;
-    }
+    
 
-
+}
+:host:hover{
+    background-color: #f9a826;
+      
+    border: 2px solid #f9a826;
+    color: #f2f2f2;
+    transition: color .2s ease;
 }
