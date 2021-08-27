@@ -26,9 +26,23 @@
     }
 
     .send{
-        position: absolute;
+     
+    background-color: #f9a826;
+    border: solid 2px #f9a826;
+    position: absolute;
     bottom: 28px;
     right: 30px;
+    color: white;
+    width: 111px;
+    height: 41px;
+    border-radius: 7px;
+    cursor: pointer;
+
+    }
+
+    .send:hover{
+        background-color: #fbbb55;
+        transition: 2ms ;
     }
 
 }

@@ -1,18 +1,19 @@
-<div  tabindex="1"  [class]=" option.class"  >
-   
- <div class="selector__info">
-    <p class="selector__option">
-        {{option.letter}}    
-       </p>
-   
-       <p class="selector__country">
-           {{ option.title}}
-       </p>
- </div>
-   
+<div tabindex="1" [class]=" option.class">
 
-    <span class="material-icons selector__result"> {{ option.isCorrect && 'check_circle' }} </span>
-
+  
+      <span  class="selector__option"> <p >
+        {{option.letter}}
+    </p></span>
+       
+    <span  class="selector__country"> <p >
+        {{ option.title}}
+    </p></span>
  
+
+
+    <span *ngIf="option.isCorrect"   class="material-icons selector__result">  check_circle  </span>
+    <span *ngIf="!option.isCorrect"   class="material-icons selector__result">     </span>
+
+
 
 </div>

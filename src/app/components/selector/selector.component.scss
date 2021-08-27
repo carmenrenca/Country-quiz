@@ -11,26 +11,39 @@
    
     .selector {
         display: flex;
- 
+        justify-content: space-between;
         border-radius: 8px;
+        padding-left: 5px;
+        padding-right: 31px;
         &__result{
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 15%;
 }   
 
-&__info{
+ &__country{
+    width: 59%;
+ }
+
+ &__option{
+    width: 21%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-}
+    justify-content: center;
+ }
+
+ 
 &--success{
+
+ 
     color: #fff;
     background-color: #60bf88;
    
 }
+
+ 
 &--error{
+ 
     color: #fff;
     background-color: #ea8282;
    

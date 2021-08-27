@@ -1,10 +1,10 @@
 <div class="card">
-    <h2 class="card__title">Bamako is the capital of:</h2>
+    <h2 class="card__title">{{ CountrieSelected}} is the capital of:</h2>
     <div class="card__content">
-        <app-selector *ngFor="let option of options" [option]="option"    (click)="selectedCard(option)" ></app-selector>
+        <app-selector *ngFor="let option of   service.options" [option]="option"    (click)="selectedCard(option)" ></app-selector>
 
  
     </div>
-    <button class="send">Siguiente</button>
+    <button *ngIf="isSelected" (click)="searchQuestion()" class="send">Siguiente</button>
 </div>
 
