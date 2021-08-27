@@ -1,3 +1,16 @@
+ 
+
+export interface Options  {
+    letter:string,
+    title:string,
+    isCorrect: null,
+    class: string
+}
+
+
+
+
+
 export interface Countries {
     name:           string;
     topLevelDomain: string[];
@@ -12,16 +25,16 @@ export interface Countries {
     latlng:         number[];
     demonym:        string;
     area:           number;
-    gini:           null;
+    gini:           number;
     timezones:      string[];
-    borders:        any[];
+    borders:        string[];
     nativeName:     string;
     numericCode:    string;
     currencies:     Currency[];
     languages:      Language[];
     translations:   Translations;
     flag:           string;
-    regionalBlocs:  any[];
+    regionalBlocs:  RegionalBloc[];
     cioc:           string;
 }
 
@@ -38,6 +51,13 @@ export interface Language {
     nativeName: string;
 }
 
+export interface RegionalBloc {
+    acronym:       string;
+    name:          string;
+    otherAcronyms: any[];
+    otherNames:    any[];
+}
+
 export interface Translations {
     de: string;
     es: string;
@@ -49,13 +69,4 @@ export interface Translations {
     nl: string;
     hr: string;
     fa: string;
-}
-
-
-
-export interface Options  {
-    letter:string,
-    title:string,
-    isCorrect: null,
-    class: string
 }

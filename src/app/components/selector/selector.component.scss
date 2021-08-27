@@ -1,16 +1,23 @@
-:host{
-    width: 90%;
-    height: 50px;
-    color: #6066d0;
-
-    border: 2px solid rgba(96,102,208,.7);
-    border-radius: 12px;
-   
-    cursor: pointer;
-    margin-top: 30px;
+ 
+  
    
     .selector {
+        
+        width: 400px;
+        height: 56px;
+        color: #6066d0;
+        background-color: #FFFFFF;
+        border: 2px solid #6066D0;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;        
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        margin-top: 20px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         border-radius: 8px;
         padding-left: 5px;
@@ -20,43 +27,63 @@
             justify-content: center;
             align-items: center;
             width: 15%;
-}   
+        }   
 
- &__country{
-    width: 59%;
- }
+            &__country{
+                width: 59%;
+            }
 
- &__option{
-    width: 21%;
-    display: flex;
-    justify-content: center;
- }
-
- 
-&--success{
+            &__option{
+                width: 21%;
+                display: flex;
+                justify-content: center;
+            }
 
  
-    color: #fff;
-    background-color: #60bf88;
-   
-}
+                    &--success{
+
+                    
+                        color: #ffff;
+                        background-color: #60BF88;
+
+                    
+                    }
 
  
-&--error{
- 
-    color: #fff;
-    background-color: #ea8282;
-   
-}
+                    &--error{
+                    
+                        color: #fff;
+                        background-color: #ea8282;
+                        transition: color .2s ease;
+
+                    }
     }
 
     
+    .selector:hover{
+        background-color: #F9A826  ;
+          
+        border: 2px solid #f9a826;
+        color: #f2f2f2;
+        transition: color .2s ease;
+    }
+ 
+    @media (max-width: 533px) {
+       
+            .selector {
+     
+                width: 340px;
+                }
+       
+    
+      }
 
-}
-:host:hover{
-    background-color: #f9a826;
-      
-    border: 2px solid #f9a826;
-    color: #f2f2f2;
-    transition: color .2s ease;
-}
+
+      @media (max-width: 400px) {
+        .selector {
+     
+            width: 286px;
+            height: 47px;
+            }
+    
+      }

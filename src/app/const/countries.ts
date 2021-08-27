@@ -19,3 +19,7 @@ export const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angol
 "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago",
 "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
 "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
+
+
+export const capital = ["Tirana", "Baku","Minsk","Brussels","Sofia","Zagreb","Prague","Copenhagen","Tallinn","Helsinki","Paris"
+,"Berlin","Rome","Dublin","Reykjavík","Luxembourg","Valleta","Belgrade","Bratislava","Ljubljana","Madrid"];
