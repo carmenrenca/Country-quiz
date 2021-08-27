@@ -1,10 +1,38 @@
 <div class="card">
-    <h2 class="card__title">Bamako is the capital of:</h2>
+  <div *ngIf="this.points.getQuestions() < 5">
+    <img
+      class="card__img"
+      src="../../../assets/img/undraw_adventure_4hum 1.svg"
+    />
+    <h2 class="card__title">{{ CapitalSelected }} is the capital of:</h2>
+
     <div class="card__content">
-        <app-selector *ngFor="let option of options" [option]="option"    (click)="selectedCard(option)" ></app-selector>
-
- 
+      <app-selector
+        *ngFor="let option of service.options"
+        [isSelected]="isSelected"
+        [option]="option"
+        (click)="selectedCard(option)"
+      ></app-selector>
     </div>
-    <button class="send">Siguiente</button>
-</div>
+    <button *ngIf="isSelected" (click)="searchQuestion()" class="send">
+      Next
+    </button>
+  </div>
+  <div *ngIf="this.points.getQuestions() >= 5">
+    <div class="card__content">
+      <div class="card__imgResult">
+        <img src="../../../assets/img/undraw_winners_ao2o 2.svg" />
+      </div>
 
+      <h3 class="card__resultTitle">Results</h3>
+
+      <h5 class="card__result">
+        You got
+        <span class="card__point">{{ this.points.getPoints() }}</span> correct
+        answers
+      </h5>
+
+      <button class="card__tryAgain" (click)="tryAgain()">Try again</button>
+    </div>
+  </div>
+</div>

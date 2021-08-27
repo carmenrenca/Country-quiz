@@ -1,42 +1,46 @@
 import { Injectable } from '@angular/core';
+import { URL_API } from 'src/environments/environment';
+import { capital, countries } from '../const/countries';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Countries, Options } from '../interfaces/countries';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class IndexService {
+  options: Options[] =  [];
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
-
-  getSolution():string{
-    return 'Reino Unido'
+  getfindByCountry(name: string): Observable<any> {
+    return this.http.get(`${URL_API}/capital/${name}`);
+  }
+  getCountryRandom(): string {
+    return countries[Math.floor(Math.random() * countries.length)];
+  }
+  getCapitalRandom(): string {
+    return capital[Math.floor(Math.random() * capital.length)];
   }
 
-  getOptions():any{
-  const   options = [{
-      letter:'A',
-      title:'Colombia',
-      isCorrect:null,
-      class:'selector'
-    },{
-      letter:'B',
-      title:'Alemania',
-      isCorrect:null,
-      class:'selector'
-    },
-    {
-      letter:'C',
-      title:'Francia',
-      isCorrect:null,
-      class:'selector'
-    },
-    {
-      letter:'D',
-      title:'Reino Unido',
-      isCorrect:null,
-      class:'selector'
-    }]
-
-    return  options
+  resetOptions() {
+    this.options = [];
   }
+  setOptions(title: string,index:number): void {
+    this.options.push({
+      letter: 'A',
+      title: title,
+      isCorrect: null,
+      class: 'selector'
+    })
    
+  }
+
+  changeOrderOptions() {
+    this.options = this.options.sort(() => Math.random() - 0.5);
+    let letterArr = ['A','B','C','D'];
+    for(let i =0; i<this.options.length; i++){
+       this.options[i].letter = letterArr[i];
+    }
+   
+  }
 }

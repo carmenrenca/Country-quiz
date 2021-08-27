@@ -9,7 +9,7 @@ export class SelectorComponent   {
  
   @Input()option:any;
   
- 
+ @Input()isSelected:boolean=false;
    
  
 
