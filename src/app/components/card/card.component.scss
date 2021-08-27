@@ -19,6 +19,8 @@
         left: 24px;
         top: 52px;
     
+        width: 82%;
+
        }
        &__img{
         position: absolute;
@@ -118,7 +120,10 @@
         .card {
  
             width: 311px;
-            height: 458px;
+            height: 429px;
+            &__title{
+                margin-bottom: 30px;
+            }
 
         }
          
@@ -127,8 +132,9 @@
                 width: 112px;
             }
             .send{
-                width: 104px;
-                height: 39px; 
+                width: 93px;
+    height: 33px;
+                bottom: 12px;
             }
     }
 
